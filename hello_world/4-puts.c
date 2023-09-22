@@ -1,5 +1,10 @@
 #include <stdio.h>
-/* Script should enter in main and return */
+/**
+ * main - entry point
+ *
+ * Specifies return type to ensure there are no errors
+ * Return: 0
+ */
 
 int main(void)
 
