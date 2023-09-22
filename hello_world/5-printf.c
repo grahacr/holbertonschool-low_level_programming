@@ -3,7 +3,7 @@
  * main - entry point
  *
  * specifies return point
- * Return value should be 0
+ * Return:0
  */
 
 int main(void)
