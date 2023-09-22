@@ -1,16 +1,2 @@
 #!/bin/bash
-#include <stdio.h>
-#include <stdlib.h>
-int main () {
-	const char *CFILE = getenv ( "CFILE" );
-char command[256];
-snprintf(command, sizeof(command), "gcc -E %s > c", CFILE);
-int status = system(command);
-if (status == 0)
-	{
-		printf("Preprocessing completed successfully.\n");
-} else {
-fprintf(stderr, "Error: Preprocessing failed.\n");
-}
-return status;
-}
+betty <$CFILE> | >> "c"
