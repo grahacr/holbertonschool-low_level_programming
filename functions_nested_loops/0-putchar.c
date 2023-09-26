@@ -2,12 +2,15 @@
 #ifndef PUTCHAR
 #define PUTCHAR
 /**
- * _putchar - Writes a character to sto
+ * main - entry point
+ * putchar - writes value to stdout
  *
- * return: 0
+ * Return: on success 0
  */
-int PUTCHAR(char c);
-int main(void);
-
+int main(void)
+{
+	putchar('_putchar');
+	putchar('\n');
+return (0);
+}
 #endif
-
