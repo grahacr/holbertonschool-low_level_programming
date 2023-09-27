@@ -1,12 +1,25 @@
 #include "main.h"
 /**
- * main - entry point
- * Return: 0
+ * main - return point
+ * Return: 0 success
  */
 int main(void)
 {
-	print_alphabet(void);
-	_putchar("a..z");
-	_putchar("\n");
-return(0);
+	print_alphabet();
+	return (0);
+}
+/**
+ * print_alphabet - print alphabet prototype
+ * Return: 0 success
+ */
+void print_alphabet(void)
+{
+	char letter = 'a';
+
+	while (letter <= 'z')
+	{
+		_putchar(letter);
+		letter++;
+	}
+	_putchar('\n');
 }
