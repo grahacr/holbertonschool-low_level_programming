@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _abs - computes absolute value of an integer
- * @int: integer
+ * @num: integer
  * Return: -num if number is negativ e, num otherwise
  *
  */
