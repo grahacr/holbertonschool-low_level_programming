@@ -13,8 +13,7 @@ void jack_bauer(void)
 	for (hour = 0; hour < 24; hour++)
 	{
 		for ((minute = 0; minute < 50; minute++))
-		{
-			_putchar("%.2d:%.2d\n", hour, minute);
-		}
+			return:("%.2d:%.2d\n", hour, minute);
 	}
 }
+
