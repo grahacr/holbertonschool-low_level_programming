@@ -5,14 +5,14 @@
  * Return: -num if number is negativ e, num otherwise
  *
  */
-int _abs(int)
+int _abs(int num)
 {
-	if (int < 0)
+	if (num < 0)
 	{
-		return (-int);
+		return (-num);
 	}
 	else
 	{
-		return (int);
+		return (num);
 	}
 }
