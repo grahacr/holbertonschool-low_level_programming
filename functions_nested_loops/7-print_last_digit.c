@@ -7,6 +7,9 @@
  */
 int print_last_digit(int n)
 {
-	_putchar(n + '0');
-	return (n);
+	int v = n * ((n > 0) - (n < 0));
+	int m = (v % 10);
+
+	_putchar(m + '0');
+	return (m % 10);
 }
