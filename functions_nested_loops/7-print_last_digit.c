@@ -5,7 +5,7 @@
  * Return: last digit of integer
  *
  */
-int print_last_digit(int);
+int print_last_digit(int)
 {
-	return (int % 10)
+	return (int % 10);
 }
