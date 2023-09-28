@@ -1,10 +1,8 @@
 #include "main.h"
 /**
  * print_numbers - print numbers zero through nine
- * @n: digit
- *
  */
-void print_numbers(int n)
+void print_numbers(void)
 
 {
 	int n = digit;
