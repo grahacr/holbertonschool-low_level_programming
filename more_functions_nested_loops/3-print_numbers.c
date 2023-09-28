@@ -1,13 +1,17 @@
 #include "main.h"
 /**
  * print_numbers - print numbers zero through nine
- * @n: number to read
- *
+ * @n: digit
  *
  */
 void print_numbers(int n)
+
 {
-	if (n >= 0 && n <= 9)
-		_putchar("%d");
-	_putchar("\n");
+	char digit;
+
+	for (digit = '0'; digit <= '9'; digit++)
+	{
+		_putchar(digit);
+	}
+	_putchar('\n');
 }
