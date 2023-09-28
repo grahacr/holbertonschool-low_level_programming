@@ -1,12 +1,11 @@
 #include "main.h"
 /**
  * print_numbers - print numbers zero through nine
- * @int: integer to read
  */
 
-void print_numbers(int)
+void print_numbers(void)
 {
-	int n;
+	char n;
 
 	for (n = '0'; n <= '9'; n++)
 	{
