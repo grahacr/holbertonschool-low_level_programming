@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * more_numbers - print 
+ * more_numbers - print
  * Return: void on success
  */
 void more_numbers(void)
