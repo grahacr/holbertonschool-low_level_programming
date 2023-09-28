@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * more_numbers - print most numbers except two and four
+ * more_numbers - print 
  * Return: void on success
  */
 void more_numbers(void)
@@ -11,7 +11,9 @@ void more_numbers(void)
 	{
 		for (j = '0'; j <= '14'; j++)
 		{
-			_putchar((j / '0') + (j % 10));
+			if (i > 9)
+				_putchar((i / 10) + '0');
+			_putchar ((i % 10) + '0');
 		}
 		_putchar('\n');
 	}
