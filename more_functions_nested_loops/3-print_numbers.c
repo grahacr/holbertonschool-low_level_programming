@@ -1,15 +1,16 @@
 #include "main.h"
 /**
  * print_numbers - print numbers zero through nine
+ * @int: integer to read
  */
-void print_numbers(void)
 
+void print_numbers(int)
 {
-	int n = digit;
+	int n;
 
-	for (digit = '0'; digit <= '9'; digit++)
+	for (n = '0'; n <= '9'; n++)
 	{
-		_putchar(digit);
+		_putchar(n);
 	}
 	_putchar('\n');
 }
