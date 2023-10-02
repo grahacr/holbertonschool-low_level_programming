@@ -1,5 +1,9 @@
 #include "main.h"
-void puts_half(char *str);
+/**
+ * puts_half - print half of char string
+ * @str: string of characters
+ */
+void puts_half(char *str)
 {
 	int length = 0;
 	int start;
