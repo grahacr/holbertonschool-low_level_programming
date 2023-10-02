@@ -12,7 +12,7 @@ int _atoi(char *s)
 
 	while (*s == ' ' || (*s >= '\t' && *s <= '\r'))
 	{
-		s++
+		s++;
 	}
 	if (*s == '-')
 	{
@@ -21,7 +21,7 @@ int _atoi(char *s)
 	}
 	else if (*s == '+')
 	{
-		s++
+		s++;
 	}
 	while (*s >= '0' && *s <= '9')
 	{
