@@ -2,11 +2,13 @@
 /**
  * _strcat - new pointer that combines two other pointer values
  * @dest: destination
- * @src: source
- * Return: src source
+ * @src: source to be copied
+ * Return: original_dest
  */
 char *_strcat(char *dest, char *src)
 {
+	char *original_dest = dest;
+
 	while (*dest != '\0')
 	{
 		dest++;
@@ -18,5 +20,5 @@ char *_strcat(char *dest, char *src)
 		src++;
 	}
 	*dest = '\0';
-	return dest;
+	return (original_dest);
 }
