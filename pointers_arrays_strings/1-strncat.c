@@ -1,14 +1,14 @@
 #include "main.h"
 /**
- * *_strncat - concatenated string
+ * _strncat - concatenated string
  * @dest: destination string
  * @src: source string
  * @n: integer to take and not surpass
- * Return: *_strncat - return pointer
+ * Return: return pointer
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	char *_strncat = *dest;
+	char *_strncat = dest;
 
 	while (*_strncat != '\0')
 	{
@@ -22,5 +22,5 @@ char *_strncat(char *dest, char *src, int n)
 		n--;
 	}
 	*_strncat = '\0';
+return: (dest);
 }
-
