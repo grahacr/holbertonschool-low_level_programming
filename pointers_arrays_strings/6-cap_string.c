@@ -1,29 +1,40 @@
 #include "main.h"
 /**
- * cap_string: capitalize characters in string
+ * cap_string - capitalize characters in string
  * @str: string to capitalize characters
  * Return: str modified string
  *
  */
 char *cap_string(char *str)
 {
-	int capitalize = 1;
+	int cap = 1;
 	char *ptr = str;
+	char sep[] = ".;,!\"(){} \n\t";
 
-	while (*ptr != '\0')
+	while (*ptr)
 	{
-		if (*ptr == ' ' || *ptr == '\t' || *ptr == '\n' || *ptr == ',' || *ptr == ';' || *ptr == '.' || *ptr == '!' || *ptr == '?' || *ptr == '"' || *ptr == '(' || *ptr == ')' || *ptr == '{' || *ptr == '}')
+		int isSep = 0;
+
+		for (int i = 0; sep[i]; i++)
 		{
-			capitalize = 1;
-		}
-		else if ((*ptr >= 'a' && *ptr <= 'z') || (*ptr >= 'A' && *ptr <= 'Z'))
-		{
-			if (capitalize)
+			if (*ptr == sep[i])
 			{
-				*ptr = (*ptr >= 'a' && *ptr <= 'z') ? *ptr - 32 : *ptr;
-				capitalize = 0;
+				isSep = 1;
+				break;
 			}
 		}
-		return (str);
+		if (!isSep)
+		{
+			if (*ptr >= 'a' & *ptr <= 'z'_)
+			{
+				*ptr = *ptr - 32;
+			}
+		}
+		else
+		{
+			cap = 1'
+		}
+		ptr++;
 	}
+	return (str);
 }
