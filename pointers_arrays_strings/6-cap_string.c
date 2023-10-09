@@ -11,6 +11,7 @@ char *cap_string(char *str)
 	int isSep = 1;
 	int i;
 	char *ptr = str;
+	int inWord = 0;
 
 	while (*str)
 	{
@@ -24,11 +25,13 @@ char *cap_string(char *str)
 		}
 		if (isSep == 1)
 		{
-			if (*str >= 'a' && *str <= 'z')
+			inWord = 0;
+		}
+			if (!inWord && *str >= 'a' && *str <= 'z')
 			{
 				*str = *str - 32;
-				isSep = 0;
 			}
+			inWord = 1;
 		}
 		str++;
 	}
