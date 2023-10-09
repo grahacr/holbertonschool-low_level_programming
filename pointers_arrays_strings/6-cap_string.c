@@ -26,11 +26,15 @@ char *cap_string(char *str)
 		{
 			inWord = 0;
 		}
-		if (!inWord && *str >= 'a' && *str <= 'z')
+		else
 		{
-			*str = *str - 32;
+			if (!inWord && *str >= 'a' && *str <= 'z')
+			{
+				*str = *str - 32;
+			}
+			inWord = 1;
 		}
-		inWord = 1;
+		isSep = 0;
 		str++;
 	}
 	return (str);
