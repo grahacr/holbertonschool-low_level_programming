@@ -2,7 +2,7 @@
 /**
  * cap_string - capitalize characters in string
  * @str: string to capitalize characters
- * Return: str modified string
+ * Return: ptr modified string
  *
  */
 char *cap_string(char *str)
@@ -10,6 +10,7 @@ char *cap_string(char *str)
 	char sep[13] = {'"', ' ', '{', '}', '.', ';', ',', '!', '(', ')', '\n', '\t'};
 	int isSep = 1;
 	int i;
+	char *ptr = str;
 
 	while (*str)
 	{
@@ -17,10 +18,6 @@ char *cap_string(char *str)
 		{
 			if (*str == sep[i])
 			{
-				if (isSep == 1)
-				{
-					break;
-				}
 				isSep = 1;
 				break;
 			}
@@ -35,5 +32,5 @@ char *cap_string(char *str)
 		}
 		str++;
 	}
-	return (str);
+	return (ptr);
 }
