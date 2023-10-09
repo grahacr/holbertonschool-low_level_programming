@@ -14,7 +14,6 @@ char *cap_string(char *str)
 	{
 		int isSep = 0;
 		int i;
-		int cap = 1;
 
 		for (i = 0; sep[i]; i++)
 		{
@@ -30,10 +29,6 @@ char *cap_string(char *str)
 			{
 				*ptr = *ptr - 32;
 			}
-		}
-		else
-		{
-			cap = 1;
 		}
 		ptr++;
 	}
