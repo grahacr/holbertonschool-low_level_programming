@@ -26,9 +26,9 @@ char *cap_string(char *str)
 			if (*str >= 'a' && *str <= 'z')
 			{
 				*str = *str - 32;
-				isSep = 0;
 			}
 		}
+		isSep = 0;
 		str++;
 	}
 	return (str);
