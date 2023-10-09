@@ -7,30 +7,30 @@
  */
 char *cap_string(char *str)
 {
-	char *ptr = str;
-	char sep[] = ".;,!\"(){} \n\t";
+	char sep[13] = {'"', '{', '}', '.', ';', ',', '!', '(', ')', '\n', '\t'};
 
-	while (*ptr)
+	while (*str)
 	{
 		int isSep = 0;
 		int i;
 
 		for (i = 0; sep[i]; i++)
 		{
-			if (*ptr == sep[i])
+			if (*str == sep[i])
 			{
 				isSep = 1;
 				break;
 			}
 		}
-		if (!isSep)
+		if isSep == 1
 		{
-			if (*ptr >= 'a' && *ptr <= 'z')
+			if (*str >= 'a' && *str <= 'z')
 			{
-				*ptr = *ptr - 32;
+				*str = *str - 32;
+				isSep = 0;
 			}
 		}
-		ptr++;
+		str++;
 	}
 	return (str);
 }
