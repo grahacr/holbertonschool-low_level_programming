@@ -10,7 +10,6 @@ char *cap_string(char *str)
 	char sep[13] = {'"', ' ', '{', '}', '.', ';', ',', '!', '(', ')', '\n', '\t'};
 	int isSep = 1;
 	int i;
-	char *ptr = str;
 	int inWord = 0;
 
 	while (*str)
@@ -35,5 +34,5 @@ char *cap_string(char *str)
 		}
 		str++;
 	}
-	return (ptr);
+	return (str);
 }
