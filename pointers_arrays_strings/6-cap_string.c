@@ -7,7 +7,6 @@
  */
 char *cap_string(char *str)
 {
-	int cap = 1;
 	char *ptr = str;
 	char sep[] = ".;,!\"(){} \n\t";
 
@@ -15,6 +14,7 @@ char *cap_string(char *str)
 	{
 		int isSep = 0;
 		int i;
+		int cap = 1;
 
 		for (i = 0; sep[i]; i++)
 		{
@@ -26,7 +26,7 @@ char *cap_string(char *str)
 		}
 		if (!isSep)
 		{
-			if (*ptr >= 'a' && *ptr <= 'z'_)
+			if (*ptr >= 'a' && *ptr <= 'z')
 			{
 				*ptr = *ptr - 32;
 			}
