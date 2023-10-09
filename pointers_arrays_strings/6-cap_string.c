@@ -26,13 +26,12 @@ char *cap_string(char *str)
 		{
 			inWord = 0;
 		}
-			if (!inWord && *str >= 'a' && *str <= 'z')
-			{
-				*str = *str - 32;
-			}
-			inWord = 1;
+		if (!inWord && *str >= 'a' && *str <= 'z')
+		{
+			*str = *str - 32;
 		}
-		str++;
+		inWord = 1;
 	}
+	str++;
 	return (str);
 }
