@@ -17,6 +17,10 @@ char *cap_string(char *str)
 		{
 			if (*str == sep[i])
 			{
+				if (isSep == 1)
+				{
+					break;
+				}
 				isSep = 1;
 				break;
 			}
@@ -26,8 +30,8 @@ char *cap_string(char *str)
 			if (*str >= 'a' && *str <= 'z')
 			{
 				*str = *str - 32;
+				isSep = 0;
 			}
-			isSep = 0;
 		}
 		str++;
 	}
