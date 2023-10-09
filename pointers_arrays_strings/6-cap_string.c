@@ -31,7 +31,7 @@ char *cap_string(char *str)
 			*str = *str - 32;
 		}
 		inWord = 1;
+		str++;
 	}
-	str++;
 	return (str);
 }
