@@ -27,8 +27,8 @@ char *cap_string(char *str)
 			{
 				*str = *str - 32;
 			}
+			isSep = 0;
 		}
-		isSep = 0;
 		str++;
 	}
 	return (str);
