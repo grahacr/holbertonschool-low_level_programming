@@ -14,8 +14,9 @@ char *cap_string(char *str)
 	while (*ptr)
 	{
 		int isSep = 0;
+		int i;
 
-		for (int i = 0; sep[i]; i++)
+		for (i = 0; sep[i]; i++)
 		{
 			if (*ptr == sep[i])
 			{
@@ -25,14 +26,14 @@ char *cap_string(char *str)
 		}
 		if (!isSep)
 		{
-			if (*ptr >= 'a' & *ptr <= 'z'_)
+			if (*ptr >= 'a' && *ptr <= 'z'_)
 			{
 				*ptr = *ptr - 32;
 			}
 		}
 		else
 		{
-			cap = 1'
+			cap = 1;
 		}
 		ptr++;
 	}
