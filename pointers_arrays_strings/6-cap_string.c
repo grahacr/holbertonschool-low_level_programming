@@ -22,7 +22,7 @@ char *cap_string(char *str)
 				break;
 			}
 		}
-		if isSep == 1
+		if (isSep == 1)
 		{
 			if (*str >= 'a' && *str <= 'z')
 			{
