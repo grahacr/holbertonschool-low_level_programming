@@ -3,7 +3,7 @@
  * _strchr - function to check for character in string
  * @s: string to check
  * @c: character to check for
- * Return: NULL if not character
+ * Return: '\0' if not character
  */
 char *_strchr(char *s, char c)
 {
@@ -13,9 +13,9 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			return (s[i]);
+			return (&(s[i]));
 		}
 		i++;
 	}
-	return (NULL);
+	return ('\0');
 }
