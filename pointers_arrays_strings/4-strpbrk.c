@@ -6,7 +6,7 @@
  * Return: pointer to matching byte in s or NULL if found
  *
  */
-char *_strpbrk(char *s, char *accept);
+char *_strpbrk(char *s, char *accept)
 {
 	while (*s != '0')
 	{
