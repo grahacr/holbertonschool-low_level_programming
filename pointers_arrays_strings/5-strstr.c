@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stddef.h>
 /**
- * strstr - search through string for another string
+ * _strstr - search through string for another string
  * @haystack: string to search
  * @needle: string being searched for
  * Return: NULL
