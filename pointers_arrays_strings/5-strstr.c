@@ -6,7 +6,7 @@
  * @needle: string being searched for
  * Return: NULL
  */
-char *strstr(char *haystack, char *needle)
+char *_strstr(char *haystack, char *needle)
 {
 	if (*needle == '\0')
 	{
