@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- *
- *
+ * factorial - factorial to print using recursion
+ * @n: integer to use
+ * Return: factorial
  */
 int factorial(int n)
 {
