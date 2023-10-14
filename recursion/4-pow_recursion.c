@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * _pow_recursion - recursively find value of x raised to power of y
- * @x: base exponent
+ * @x: base
  * @y: exponent
- * Return: x * _pow_recursion
+ * Return: x^y
  */
 int _pow_recursion(int x, int y)
 {
@@ -11,12 +11,12 @@ int _pow_recursion(int x, int y)
 	{
 		return (1);
 	}
-	if (y > 0)
+	else if (y > 0)
 	{
-		return (x * _pow_recursion(x, -y));
+		return (x * _pow_recursion(x, y - 1));
 	}
-	else if (y < 0)
+	else
 	{
-		return (-1);
+		return (1.0 / (x * _pow_recursion(x, -y));
 	}
 }
