@@ -1,11 +1,9 @@
 #include "main.h"
 /**
  * _calculate - calculate square root
- * @guess: integer to use in guessing
- * 
- * _sqrt_recursion - return square root of number
  * @n: integer to use
- * Return: _calculate
+ * @guess: integer to use in guessing
+ * Return: _calculate next guess
  */
 int _calculate(int n, int guess)
 {
@@ -20,6 +18,11 @@ int _calculate(int n, int guess)
 		return (_calculate(n, next_guess));
 	}
 }
+/**
+ * _sqrt_recursion - return square root of number
+ * @n: integer to use
+ * Return: _calculate
+ */
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
