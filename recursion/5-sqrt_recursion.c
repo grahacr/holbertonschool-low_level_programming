@@ -8,16 +8,16 @@
  */
 int _calculate(int n, int guess)
 {
-        int next_guess = (guess + n / guess) / 2;
+	int next_guess = (guess + n / guess) / 2;
 
-        if (next_guess == guess)
-        {
-                return (guess);
-        }
-        else
-        {
-                return (_calculate(n, next_guess));
-        }
+	if (next_guess == guess)
+	{
+		return (guess);
+	}
+	else
+	{
+		return (_calculate(n, next_guess));
+	}
 }
 int _sqrt_recursion(int n)
 {
