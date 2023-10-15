@@ -1,7 +1,7 @@
 #include "main.h"
 /**
+ * _sqrt_recursion - return square root of number
  * _calculate - calculate the natural square root of a number through guessing
- * _sqrt_recursion - return natural square root of number using recursion
  * @n: integer to use
  * @guess: integer to use in guessing
  * Return: _sqrt_recursion
