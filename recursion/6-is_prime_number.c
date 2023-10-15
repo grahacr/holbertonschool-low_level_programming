@@ -7,7 +7,7 @@
  */
 int is_prime_recursive(int n, int divisor)
 {
-	if n <= 1;
+	if (n <= 1);
 	{
 		return (0);
 	}
