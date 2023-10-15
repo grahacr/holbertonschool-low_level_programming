@@ -4,7 +4,7 @@
  * _calculate - calculate the natural square root of a number through guessing
  * @n: integer to use
  * @guess: integer to use in guessing
- * Return: _sqrt_recursion
+ * Return: _calculate 
  */
 int _calculate(int n, int guess)
 {
