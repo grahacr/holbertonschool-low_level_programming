@@ -1,11 +1,10 @@
 #include "main.h"
 /**
- * _sqrt_recursion - return square root of number
- * @n: integer to use
- * Return: _calculate closest guess
- *
  * _calculate - calculate square root
  * @guess: integer to use in guessing
+ * 
+ * _sqrt_recursion - return square root of number
+ * @n: integer to use
  * Return: _calculate
  */
 int _calculate(int n, int guess)
