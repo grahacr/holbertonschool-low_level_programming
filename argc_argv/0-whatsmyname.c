@@ -1,6 +1,12 @@
 #include "main.h"
 #include <stddef.h>
-int main (int argc, char *argv[])
+/**
+ * main - main program entry point
+ * @argc: number of arguments
+ * @argv: the arguments
+ * Return: 0 on success
+ */
+int main(int argc, char *argv[])
 {
 	if (argc > 0 && argv[0] != NULL)
 	{
