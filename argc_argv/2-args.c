@@ -1,15 +1,19 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *
+ * main - entry point, main program
+ * @argc: number of arguments
+ * @argv: arguments
+ * Return: 0 on success
  */
 int main(int argc, char *argv[])
 {
-	if (argc > 0 && argv[0] != NULL)
+	for (int i = 0; i < argc; i++)
 	{
-		char *argument = argv[0];
-		printf("%s\n", argument);
-		argument++;
+		if (argv[i] != NULL)
+		{
+			printf("%s\n", argv[i]);
+		}
 	}
 	return (0);
 }
