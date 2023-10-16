@@ -1,2 +1,2 @@
 # holbertonschool-low_level_programming
-Repo for learning C
+Repo for learning C weeee
