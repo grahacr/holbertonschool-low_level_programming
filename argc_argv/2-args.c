@@ -5,11 +5,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
+	if (argc > 0 && argv[0] != NULL)
 	{
-		_putchar("%c\n", argv[i]);
+		char *argument = argv[0];
+		printf("%s\n", argument);
 	}
 	return (0);
 }
