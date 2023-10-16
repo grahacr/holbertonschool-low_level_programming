@@ -3,7 +3,8 @@
 #include <stdio.h>
 /**
  * multiply - multiply input of 2 integers
- * @int: integer to multiply
+ * @a: integer to multiply
+ * @b: second integer to multiply
  * Return: product of integers
  */
 int multiply(int a, int b)
