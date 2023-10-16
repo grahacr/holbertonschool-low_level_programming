@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * multiply - multiply input of 2 integers
  * @int: integer to multiply
