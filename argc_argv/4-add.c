@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * is_digit - find if digits or not
  * @str: string to search
@@ -9,7 +10,7 @@ int is_digit(const char *str)
 {
 	int i;
 
-	for (i = 0; str[i] != '\0'; i++;)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] < '0' || str[i] > '9')
 		{
