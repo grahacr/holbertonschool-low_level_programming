@@ -10,19 +10,17 @@
 char *_strdup(char *str)
 {
 	int i;
+	int length = 0;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	int length = 0;
-
 	while (str[length] != '\0')
 	{
 		length++;
 	}
 	char *duplicate = (char *)malloc(length + 1);
-
 	if (duplicate == NULL)
 	{
 		return (NULL);
