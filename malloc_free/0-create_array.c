@@ -1,7 +1,11 @@
 #include "main.h"
+#include <stddef.h>
+#include <stdlib.h>
 /**
- *
- *
+ * create_array - create array of chars using malloc
+ * @char: specific char to create array
+ * @int: integer to create array
+ * Return: array on success
  */
 
 char *create_array(unsigned int size, char c)
@@ -19,7 +23,7 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	for (i; i < size, i++)
+	for (i; i < size; i++)
 	{
 		array[i] = c;
 	}
