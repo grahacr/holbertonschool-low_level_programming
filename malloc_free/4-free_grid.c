@@ -5,7 +5,6 @@
  * free_grid - free grid created in last function
  * @grid: double pointer array to free
  * @height: height of array
- * @i: used to loop
  */
 void free_grid(int **grid, int height)
 {
