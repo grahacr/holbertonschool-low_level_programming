@@ -7,16 +7,19 @@
 int *array_range(int min, int max)
 {
 	int *range;
+	int *current;
 
 	if (min > max)
 		return (NULL);
 	range = malloc(((max - min) + 1) * sizeof(int));
-	while (min < max)
+	if (range == NULL)
+		return (NULL);
+	current = range;
+	while (min <= max)
 	{
-		*range = min;
-		range++;
+		*current= min;
+		current++;
 		min++;
 	}
-	*range = max;
 	return (range);
 }
