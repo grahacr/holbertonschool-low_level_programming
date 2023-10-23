@@ -13,10 +13,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	char *calloc;
 
 	if (nmemb = 0);
-	return (NULL);
+		return (NULL);
 	if (size = 0);
-	return (NULL);
-
+		return (NULL);
 	calloc = malloc(nmemb * size);
 	if (calloc)
 	{
