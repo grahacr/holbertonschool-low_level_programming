@@ -7,7 +7,7 @@
  * @s1: first string to add
  * @s2: second string to add
  * @n: integer to help determine how much of s2 to add
- * return: result on success, NULL on error
+ * Return: result on success, NULL on error
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -21,6 +21,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	else
 	{
+		s1 = "";
 		len_s1 = 0;
 	}
 	if (s2 == NULL)
