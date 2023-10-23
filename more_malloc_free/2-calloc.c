@@ -10,12 +10,11 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int index;
 	char *calloc;
 
-	if nmemb = 0;
+	if (nmemb = 0);
 	return (NULL);
-	if size = 0;
+	if (size = 0);
 	return (NULL);
 
 	calloc = malloc(nmemb * size);
