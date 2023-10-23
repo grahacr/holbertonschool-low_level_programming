@@ -4,8 +4,8 @@
 #include <stdio.h>
 /**
  * _calloc - allocate memory and set value to 0
- * @nmemb - number of elements
- * @size = size of elements
+ * @nmemb: number of elements
+ * @size: size of elements
  * Return: calloc on success, NULL on failure
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
