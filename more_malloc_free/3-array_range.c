@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *
+ * array_range - create pointer to array of integers
+ * @min: minimum integer
+ * @max: maximum integer
+ * Return: range on success and NULL on failure
  */
 int *array_range(int min, int max)
 {
@@ -17,7 +20,7 @@ int *array_range(int min, int max)
 	current = range;
 	while (min <= max)
 	{
-		*current= min;
+		*current = min;
 		current++;
 		min++;
 	}
