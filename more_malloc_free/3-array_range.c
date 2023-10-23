@@ -8,8 +8,8 @@ int *array_range(int min, int max)
 {
 	int *range;
 
-	if (min > max);
-	return (NULL);
+	if (min > max)
+		return (NULL);
 	range = malloc(((max - min) + 1) * sizeof(int));
 	while (min < max)
 	{
@@ -18,4 +18,5 @@ int *array_range(int min, int max)
 		min++;
 	}
 	*range = max;
+	return (range);
 }
