@@ -34,22 +34,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len_s2 = 0;
 	}
 	if (n >= len_s2)
-	{
 		n = len_s2;
-	}
 	result = (char *)malloc(len_s1 + n + 1);
 	if (result == NULL)
-	{
 		return (NULL);
-	}
 	if (s1 != NULL)
-	{
 		strcpy(result, s1);
-	}
 	else
-	{
 		result[0] = '\0';
-	}
 	strncat(result, s2, n);
 	result[len_s1 + n] = '\0';
 	return (result);
