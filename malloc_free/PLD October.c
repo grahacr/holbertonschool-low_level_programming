@@ -30,6 +30,7 @@ char *concatenateStrings(const char *str1, const char *str2)
 	}
 	strcpy(result, str1);
 	strcat(result, str2);
+	printf("%s\n", result);
 	return (result);
 }
 int main(int argc, char *argv[])
