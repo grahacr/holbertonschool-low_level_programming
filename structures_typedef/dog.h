@@ -2,6 +2,9 @@
 #define DOG_H
 /**
  * struct dog - user defined structure including diff data types
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
  */
 struct dog
 {
