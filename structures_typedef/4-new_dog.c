@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *
- *
+ * _strdup - duplicate string function
+ * @str: string to duplicate
+ * Return: duplicate on success
  */
 char *_strdup(char *str)
 {
@@ -25,9 +26,17 @@ char *_strdup(char *str)
 	duplicate[length] = '\0';
 	return (duplicate);
 }
+/**
+ * new_dog - create new dog with info
+ * @name: name of new dog
+ * @age: age of new dog
+ * @owner: owner of new dog
+ * Return: new_dog;
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog = malloc(sizeof(dog_t));
+
 	if (name == NULL || owner == NULL)
 	{
 		return (NULL);
@@ -46,5 +55,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	new_dog->age = age;
-	return new_dog;
+	return (new_dog);
 }
