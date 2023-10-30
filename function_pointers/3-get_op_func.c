@@ -5,7 +5,7 @@
 /**
  * get_op_func - select correct function to perform operation
  * @s: operator passed as argument to program
- * 
+ * Return: NULL
  */
 int (*get_op_func(char *s))(int, int)
 {
