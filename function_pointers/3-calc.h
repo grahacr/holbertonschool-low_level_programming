@@ -1,6 +1,14 @@
-#ifndef CALC_H
-#define CALC_H
+#ifndef 3-CALC_H
+#define 3-CALC_H
 #include <stdio.h>
+struct ops[] = {
+	{"+", op_add},
+	{"-", op_sub},
+	{"*", op_mul},
+	{"/", op_div},
+	{"%", op_mod},
+	{NULL, NULL}
+};
 int op_add(int a, int b);
 int op_sub(int a, int b);
 int op_mul(int a, int b);
