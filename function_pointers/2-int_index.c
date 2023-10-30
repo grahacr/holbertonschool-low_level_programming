@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * int_index - search array for integers 
+ * int_index - search array for integers
  * @array: array to search
  * @size: size of array
  * @cmp: function to compare integers
