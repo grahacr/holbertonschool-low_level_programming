@@ -1,6 +1,11 @@
 #ifndef CALC_H
 #define CALC_H
 #include <stdio.h>
+/**
+ * struct op -structure defining operations
+ * @op: character string
+ * @f: function pointer
+ */
 typedef struct op
 {
 	char *op;
