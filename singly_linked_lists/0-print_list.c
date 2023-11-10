@@ -9,10 +9,10 @@ size_t print_list(const list_t *h)
 
 	while (current != NULL)
 	{
-		printf("[%zu] %s\n", current->len, current->str);
+		printf("[%lu] %s\n", current->len, current->str);
 		current = current->next;
 		count++;
 	}
-	printf("-> %zu elements\n", count);
+	printf("-> %lu elements\n", count);
 	return(count);
 }
