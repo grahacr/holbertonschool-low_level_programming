@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
+/**
+ * print_list - print singly linked list
+ * @h: input string
+ * Return: count on success
+ */
 size_t print_list(const list_t *h)
 {
 	const list_t *current = h;
@@ -20,5 +25,5 @@ size_t print_list(const list_t *h)
 		current = current->next;
 		count++;
 	}
-	return(count);
+	return (count);
 }
