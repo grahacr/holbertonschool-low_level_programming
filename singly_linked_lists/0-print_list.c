@@ -19,6 +19,6 @@ size_t print_list(const list_t *h)
 	{
 		printf("[%lu] (nil)", current->len);
 	}
-	return(count);
 	}
+	return(count);
 }
