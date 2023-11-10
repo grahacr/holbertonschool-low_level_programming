@@ -4,24 +4,15 @@
 #include <stdlib.h>
 size_t print_list(const list_t *h)
 {
-	list_t *head;
-	list_t *new;
-	size_t n;
+	const list_t *current = h;
+	size_t count = 0;
 
-	head = malloc(sizeof(list_t));
-	head = &hello;
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
+	while (current != NULL)
 	{
-		printf("Error\n");
-		return (1);
+		printf("%d ", current->data);
+		current = current->next;
+		count++;
 	}
-	new->data = strdup("Hello");
-	new->len = 5;
-	new->link = head;
-	head = new;
-	n = print_list(head);
-	printf("-> %lu elements\n", n);
-	free(new);
-	return(0);
+	printf("\n");
+	return(count);
 }
