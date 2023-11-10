@@ -9,7 +9,7 @@ size_t print_list(const list_t *h)
 
 	while (current != NULL)
 	{
-		printf("%ld ", current->data);
+		printf("%s ", current->str);
 		current = current->next;
 		count++;
 	}
