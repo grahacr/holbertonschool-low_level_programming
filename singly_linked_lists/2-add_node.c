@@ -9,13 +9,12 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *current = malloc(sizeof(list_t));
-	size_t count;
 
 	while (current != NULL)
 	{
-		head -> next = current;
+		*head -> next = current;
 		current = head;
 	}
-	return (count);
+	return (current);
 }
 
