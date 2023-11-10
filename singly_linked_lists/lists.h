@@ -5,7 +5,7 @@
 #include <stdlib.h>
 int _putchar(char c);
 /**
- * list - singly linked list
+ * struct list - singly linked list
  * @str: input string
  * @len: location of node
  * @next: pointer to next node
