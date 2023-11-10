@@ -1,9 +1,15 @@
+#ifndef LISTS_H
+#define LISTS_H
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
-#ifndef LISTS_H
-#define LISTS_H
 int _putchar(char c);
+/**
+ * list - singly linked list
+ * @str: input string
+ * @len: location of node
+ * @next: pointer to next node
+ */
 typedef struct list
 {
 	char *str;
