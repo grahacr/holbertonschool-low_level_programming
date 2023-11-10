@@ -7,11 +7,13 @@ size_t print_list(const list_t *h)
 	const list_t *current = h;
 	size_t count = 0;
 
-	if (current->len != NULL && current->str != NULL)
+	while (current->str != NULL)
 	{
-		printf("[%lu] %s\n", current->len, current->str);
-		current = current->next;
-		count++;
+		if (current)
+		{
+			printf("[%lu] %s\n", current->len, current->str);
+			current = current->next;
+			count++;
 	}
 	else
 	{
