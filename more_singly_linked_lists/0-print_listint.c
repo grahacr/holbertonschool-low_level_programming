@@ -14,7 +14,8 @@ size_t print_listint(const listint_t *h)
 	{
 		return (0);
 	}
-	const listint_t *ptr = h;
+	const listint_t *ptr;
+	*ptr = h;
 
 	while (ptr != NULL)
 	{
