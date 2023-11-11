@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
+ * free_listint2 - free list and set head to null
+ * @head: pointer to pointer to head of list
  */
 void free_listint2(listint_t **head)
 {
