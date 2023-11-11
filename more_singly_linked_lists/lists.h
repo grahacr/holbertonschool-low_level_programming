@@ -6,8 +6,9 @@
 #include <stddef.h>
 int _putchar(char c);
 /**
- *
- *
+ * struct list - singly linked list
+ * @n: integer input
+ * @next: pointer to next node
  */
 typedef struct list
 {

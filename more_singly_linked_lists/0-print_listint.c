@@ -3,8 +3,9 @@
 #include <stdlib.h>
 #include <stddef.h>
 /**
- *
- *
+ * print_listint - print elements in singly linked list
+ * @h: pointer to elements
+ * Return: number of elements
  */
 size_t print_listint(const listint_t *h)
 {
