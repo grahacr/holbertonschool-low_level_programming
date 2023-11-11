@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
+ * free_list - free singly linked list
+ * @head: head of list
  */
 void free_list(list_t *head)
 {
