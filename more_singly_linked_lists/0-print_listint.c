@@ -20,7 +20,7 @@ size_t print_listint(const listint_t *h)
 	while (ptr != NULL)
 	{
 		count++;
-		printf("%d ", ptr->((int)str));
+		printf("%d ", ptr->data);
 		ptr = ptr->next;
 	}
 	return (count);

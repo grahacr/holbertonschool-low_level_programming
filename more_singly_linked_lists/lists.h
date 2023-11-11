@@ -11,8 +11,7 @@ int _putchar(char c);
  */
 typedef struct list
 {
-	char *str;
-	size_t len;
+	size_t data;
 	struct list *next;
 } listint_t;
 size_t print_listint(const listint_t *h);
