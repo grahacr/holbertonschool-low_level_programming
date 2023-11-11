@@ -2,7 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
+ * add_nodeint - add node to singly linked list
+ * @head: pointer to pointer to head of list
+ * @n: integer input
+ * Return: address of new node on success
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
