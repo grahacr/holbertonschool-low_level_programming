@@ -6,7 +6,7 @@ int sum_listint(listint_t *head)
 	int sum;
 	listint_t *ptr;
 
-	if (ptr == NULL)
+	if (head == NULL)
 	{
 		return (0);
 	}
