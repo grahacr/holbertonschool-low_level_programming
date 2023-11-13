@@ -4,16 +4,15 @@
 int sum_listint(listint_t *head)
 {
 	int sum;
-	listint_t *ptr;
+	listint_t *ptr = head;
 
-	if (head == NULL)
+	if (ptr == NULL)
 	{
 		return (0);
 	}
 	else
 	{
-		ptr = head;
-		sum += ptr->n;
+		sum = sum + ptr->n;
 		ptr = ptr->next;
 	}
 	return (sum);
