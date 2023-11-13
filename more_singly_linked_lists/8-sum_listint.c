@@ -3,8 +3,8 @@
 #include <stdlib.h>
 int sum_listint(listint_t *head)
 {
-	int sum = 0;
-	listint_t *ptr = head;
+	int sum;
+	listint_t *ptr;
 
 	if (ptr == NULL)
 	{
@@ -12,6 +12,7 @@ int sum_listint(listint_t *head)
 	}
 	else
 	{
+		ptr = head;
 		sum += ptr->n;
 		ptr = ptr->next;
 	}
