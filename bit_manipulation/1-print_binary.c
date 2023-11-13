@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 	for (i = count - 1; i >= 0; i--)
 	{
 		int bit = (n >> i) & 1;
-		printf("%d", bit);
+		_putchar("%c", bit);
 	}
 }	
 
