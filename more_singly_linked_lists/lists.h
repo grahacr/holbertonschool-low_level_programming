@@ -12,7 +12,7 @@ int _putchar(char c);
  */
 typedef struct list
 {
-	size_t n;
+	int n;
 	struct list *next;
 } listint_t;
 size_t print_listint(const listint_t *h);
