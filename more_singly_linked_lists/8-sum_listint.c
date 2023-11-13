@@ -4,7 +4,7 @@
 int sum_listint(listint_t *head)
 {
 	int sum;
-	ptr = head;
+	listint_t *ptr = head;
 
 	if (ptr == NULL)
 	{
