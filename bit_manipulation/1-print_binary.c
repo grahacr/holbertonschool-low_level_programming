@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int count = sizeof(n) * 8;
+	int count = sizeof(n);
 	int i;
 
 	for (i = count - 1; i >= 0; i--)
