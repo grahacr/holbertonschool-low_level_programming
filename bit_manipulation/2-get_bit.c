@@ -2,8 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
- *
+ * get_bit - return value of bit at given index
+ * @n: integer
+ * @index: index of bits
+ * Return: binary value on success, -1 on failure
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
