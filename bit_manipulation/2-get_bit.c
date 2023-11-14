@@ -9,7 +9,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int mask = 1UL << index;
 
-	if ((n & mask) >= 0)
+	if ((n & mask) != 0)
 	{
 		return (1);
 	}
