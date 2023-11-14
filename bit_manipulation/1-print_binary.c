@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
+ * print_binary - print unsigned long int in binary representation
+ * @n: integer input to convert to binary and print 
  */
 void print_binary(unsigned long int n)
 {
@@ -27,4 +28,4 @@ void print_binary(unsigned long int n)
 	{
 		_putchar('0');
 	}
-}	
+}
