@@ -8,14 +8,14 @@
 /**
  * append_text_to_file - append text to end of a file
  * @filename: file to append to end of
- * @text content: text to append to end of file
+ * @text_content: text to append to end of file
  * Return: 1 on success, -1 on failure
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int op, wr;
 
-	if (filename == NULL || text_content == NULL)
+	if (filename == NULL)
 	{
 		return (-1);
 	}
