@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
  * add_dnodeint - add node at beginning of doubly linked list
- * @head - pointer to pointer to head of list
+ * @head: pointer to pointer to head of list
  * @n: value to store
  * Return: ptr on success, 0 on failure
  */
