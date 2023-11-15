@@ -3,6 +3,7 @@
 #include <stddef.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 /**
  *
  */
@@ -10,7 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int op, rd, wr;
 	char *buff;
-	buff = malloc(sizeof(char *)letters);
+	buff = malloc(sizeof(char)*letters);
 
 	if (buff == NULL)
 	{
