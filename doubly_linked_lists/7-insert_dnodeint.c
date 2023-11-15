@@ -2,8 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *
- *
+ * insert_dnodeint_at_index - insert new node at given index in doubly linked list
+ * @h: pointer to pointer to head of list
+ * @idx: index at which to insert node
+ * @n: value in new node
+ * Return: new node on success, NULL on error
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -45,5 +48,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		ptr->next->prev = new;
 	}
 	ptr->next = new;
-	return(new);
+	return (new);
 }
