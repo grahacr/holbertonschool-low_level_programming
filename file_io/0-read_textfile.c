@@ -8,25 +8,20 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int descriptor = open(filename, 0_RDONLY);
-	char buff[letters];
-	ssize_t bread = read(descriptor, buff, sizeof(buff));
+	int op, rd, wr;
+	char *buff;
+	buff = malloc(sizeof(char *)letters);
 
-	if (descriptor == -1)
+	if (buff == NULL)
 	{
-		return (-1);
+		return (0);
 	}
-	if (bread == -1)
+	op = open(filename, 0_RDONLY);
+	rd = read(op, buff, letters);
+	wr = write(STDOUT_FILENO, buff, rd);
+
+	if (op == -1 || rd == -1 || wr == -1)
 	{
-		return (-1);
+		free(buff);
 	}
-	else
-	{
-		if (write(STDOUT_FILENO, buff, bread) != bread)
-		{
-			bread = -1;
-		}
-	}
-	close(descriptor);
-	return (bread);
 }
