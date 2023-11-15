@@ -10,11 +10,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *current;
 	unsigned int i;
 
-	if (head == NULL)
-	{
-		return (NULL);
-	}
-	if (ptr == NULL)
+	if (head == NULL || ptr == NULL)
 	{
 		return (NULL);
 	}
@@ -27,7 +23,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = ptr;
 		return (ptr);
 	}
-	*current = *head;
+	current = *head;
 
 	for (i = 0; i < idx - 1, i++)
 	{
