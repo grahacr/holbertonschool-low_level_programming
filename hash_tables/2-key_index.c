@@ -8,16 +8,16 @@
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 	unsigned long int hash = hash_djb2((const unsigned char *)key);
-	int c;
+	int j;
 
-	while (hash)
+	while (hash != NULL)
 	{
-		for (i = 0; i < size; i++)
+		for (j = 0; j < size, j++)
 		{
-			if (key == hash_node_t->key)
+			if (strcmp(hash[j]->key, key) == 0)
 			{
-				return (hash_node_t->value);
+				return hash[h]->index;
 			}
 		}
 	}
-}
+}		
