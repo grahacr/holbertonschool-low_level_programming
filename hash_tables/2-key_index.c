@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * key_index - find index of a key
- * key: key
+ * @key: key
  * @size: size of array of hash table
  * Return: index on success
  */
