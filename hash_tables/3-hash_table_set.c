@@ -8,7 +8,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int index = hash_djb2((const unsigned char *)key);
+	int index = hash_djb2((const unsigned char *)key) % ht->size;
 	hash_node_t *new = malloc(sizeof(hash_node_t));
 
 	if (new == NULL)
@@ -34,7 +34,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht[index].array[index] = new;
 	else
 	{
-		hash_node_t *current = ht[index].array[index];
+		hash_node_t *current = ht->array[index];
 		while (current->next != NULL)
 		{
 			current = current->next;
