@@ -8,11 +8,11 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int index = hash_djb2(*key);
+	int index = hash_djb2(key);
 	hash_node_t *new = malloc(sizeof(hash_node_t));
 
 	strcpy(new->key, key);
-	new->value = value;
+	new->value = strdup(value);
 	new->next = NULL;
 
 	if (ht[index] == NULL)
@@ -26,4 +26,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		current->next = new;
 	}
+	return (0);
 }
