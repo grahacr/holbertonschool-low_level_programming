@@ -13,33 +13,47 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (new == NULL)
 	{
-		return (-1);
+		return (0);
 	}
 	new->key = strdup(key);
 	if (new->key == NULL)
 	{
 		free(new);
-		return (-1);
+		return (0);
 	}
 	new->value = strdup(value);
 	if (new->value == NULL)
 	{
 		free(new->key);
 		free(new);
-		return (-1);
+		return (0);
 	}
 	new->next = NULL;
 
-	if (ht[index].array[index] == NULL)
-		ht[index].array[index] = new;
+	if (ht->array[index] == NULL)
+		ht->array[index] = new;
 	else
 	{
 		hash_node_t *current = ht->array[index];
-		while (current->next != NULL)
+		while (currenti != NULL)
 		{
-			current = current->next;
+			if (strcmp(current->key, key) == 0)
+			{
+				free(current->value);
+				current->value = strdup(value);
+				free(new->key);
+				free(new->value);
+				free(new);
+				return(1);
+			}
+			if (current->next; == NULL)
+			{
+				break;
+			}
+		current = current->next;
 		}
-		current->next = new;
+		new->next = ht->array[index];
+		ht->array[index] = new;
 	}
-	return (0);
+	return (1);
 }
