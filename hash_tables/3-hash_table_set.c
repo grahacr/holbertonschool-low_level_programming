@@ -15,11 +15,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->value = strdup(value);
 	new->next = NULL;
 
-	if (ht[index] == NULL)
-		ht[index] = new;
+	if (ht[index]->hash_node_t == NULL)
+		ht[index]->hash_node_t = new;
 	else
 	{
-		hash_node_t *current = ht[index];
+		hash_node_t *current = ht[index]->hash_node_t;
 		while (current->next != NULL)
 		{
 			current = current->next;
