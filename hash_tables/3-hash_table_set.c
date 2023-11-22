@@ -11,47 +11,39 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int index = hash_djb2((const unsigned char *)key) % ht->size;
-	hash_node_t *new = malloc(sizeof(hash_node_t));
+	hash_node_t *new;
+	char *valuecp;
+	unsigned long int index = hash_djb2((const unsigned char *)key, ht->size);
+	unsigned long int i;
 
-	new->key = strdup(key);
-	if (new->key == NULL || new == NULL)
-	{
-		free(new);
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
-	}
-	new->value = strdup(value);
-	if (new->value == NULL)
-	{
-		free(new->key);
-		free(new);
+	valuecp = strdup(value);
+	if (valuecp == NULL)
 		return (0);
-	}
-	new->next = NULL;
-	if (ht->array[index] == NULL)
-		ht->array[index] = new;
-	else
+	for (i = index; ht->array[i]; i++)
 	{
-		hash_node_t *current = ht->array[index];
-		while (current != NULL)
+		if (strcmp(ht->array[i]->key, key) == 0)
 		{
-			if (strcmp(current->key, key) == 0)
-			{
-				free(current->value);
-				current->value = strdup(value);
-				free(new->key);
-				free(new->value);
-				free(new);
-				return(1);
-			}
-			if (current->next == NULL)
-			{
-				break;
-			}
-		current = current->next;
+			free(ht->array[i]->value);
+			ht->array[i]->value = valuecp;
+			return (1);
 		}
-		new->next = ht->array[index];
-		ht->array[index] = new;
 	}
+	new = malloc(sizeof(hash_node_t));
+	if (new == NULL)
+	{
+		free(valuecp);
+		return (0);
+	}
+	new->key = strdup(key);
+	if (new->key == NULL)
+	{
+		free(new);
+		return (0);
+	}
+	new->value = valuecp;
+	new->next = ht->array[index];
+	ht->array[index] = new;
 	return (1);
 }
