@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
- *
+ * hash_table_delete - delete hash table
+ * @ht: hash table to delete
  */
 void hash_table_delete(hash_table_t *ht)
 {
