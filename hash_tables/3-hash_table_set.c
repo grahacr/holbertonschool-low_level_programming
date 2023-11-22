@@ -35,20 +35,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		hash_node_t *current = ht->array[index];
 		while (current != NULL)
 		{
-			free(current->value);
-			current->value = strdup(value);
-			free(new->key);
-			free(new->value);
-			free(new);
-			return (1);
-		}
-		if (current->next == NULL)
-		{
-			break;
-		}
+			if (strcmp(current->key, key) == 0)
+			{
+				free(current->value);
+				current->value = strdup(value);
+				free(new->key);
+				free(new->value);
+				free(new);
+				return (1);
+			}
+			if (current->next == NULL)
+			{
+				break;
+			}
 		current = current->next;
-	}
+		}
 	new->next = ht->array[index];
 	ht->array[index] = new;
+	}
+	return (1);
 }
-return (1);
