@@ -3,20 +3,19 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *
- *
+ * hash_table_set - add element to hash table
+ * @ht: hash table to add value or update value to
+ * @key: key. cannot be empty
+ * @value: associated with key. must be duplicated. 
+ * Return: 1 on success, 0 on failure
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int index = hash_djb2((const unsigned char *)key) % ht->size;
 	hash_node_t *new = malloc(sizeof(hash_node_t));
 
-	if (new == NULL)
-	{
-		return (0);
-	}
 	new->key = strdup(key);
-	if (new->key == NULL)
+	if (new->key == NULL || new == null)
 	{
 		free(new);
 		return (0);
@@ -29,7 +28,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	new->next = NULL;
-
 	if (ht->array[index] == NULL)
 		ht->array[index] = new;
 	else
@@ -56,4 +54,4 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = new;
 	}
 	return (1);
-}
+i}
