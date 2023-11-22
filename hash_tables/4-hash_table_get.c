@@ -3,8 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *
- *
+ * hash_table_get - get value stored at key
+ * @ht: hash table to search
+ * @key: key to value
+ * Return: value or NULL on failure
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
