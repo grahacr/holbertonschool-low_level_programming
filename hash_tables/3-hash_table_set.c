@@ -55,11 +55,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new->next = ht->array[index];
 		ht->array[index] = new;
 	}
-	if (new->next != NULL)
-	{
-		free(new->key);
-		free(new->value);
-		free(new);
-	}
 	return (1);
 }
