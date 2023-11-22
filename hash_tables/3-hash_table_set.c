@@ -20,7 +20,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	valuecp = strdup(value);
 	if (valuecp == NULL)
 		return (0);
-	index = hash_djb2((const unsigned char*)key, ht->size);
+	index = hash_djb2((const unsigned char*)key);
 	for (i = index; ht->array[i]; i++)
 	{
 		if (strcmp(ht->array[i]->key, key) == 0)
