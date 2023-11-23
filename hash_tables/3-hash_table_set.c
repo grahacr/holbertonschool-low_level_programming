@@ -11,56 +11,48 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index = 0;
-	char *holdvalue = NULL;
-	hash_node_t *current = NULL;
-	hash_node_t *new = NULL;
+	int index = hash_djb2((const unsigned char *)key) % ht->size;
+	hash_node_t *new = malloc(sizeof(hash_node_t));
 
-	if (ht == NULL || ht->array == NULL || value == NULL)
-		return (0);
-	if (strlen(key) == 0 || key == NULL)
-		return (0);
-	holdvalue = strdup(value);
-	if (holdvalue == NULL)
-		return (0);
-	index = hash_djb2((const unsigned char *)key);
-	current = ht->array[index];
-	while (current)
-	{
-		if (strcmp(current->key, key) == 0)
-		{
-			free(current->value);
-			current->value = strdup(holdvalue);
-			free(holdvalue);
-			if (current->value == NULL)
-				return (0);
-			return (1);
-		}
-		current = current->next;
-	}
-	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
-	{
-		free(holdvalue);
 		return (0);
-	}
 	new->key = strdup(key);
 	if (new->key == NULL)
 	{
-		free(holdvalue);
 		free(new);
 		return (0);
 	}
-	new->value = strdup(holdvalue);
+	new->value = strdup(value);
 	if (new->value == NULL)
 	{
 		free(new->key);
 		free(new);
-		free(holdvalue);
 		return (0);
 	}
-	new->next = ht->array[index];
-	ht->array[index] = new;
-	free(holdvalue);
+	new->next = NULL;
+	if (ht->array[index] == NULL)
+		ht->array[index] = new;
+	else
+	{
+		hash_node_t *current = ht->array[index];
+
+		while (current != NULL)
+		{
+			if (strcmp(current->key, key) == 0)
+			{
+				free(current->value);
+				current->value = strdup(value);
+				free(new->key);
+				free(new->value);
+				free(new);
+				return (1);
+			}
+			if (current->next == NULL)
+				break;
+			current = current->next;
+		}
+		new->next = ht->array[index];
+		ht->array[index] = new;
+	}
 	return (1);
 }
