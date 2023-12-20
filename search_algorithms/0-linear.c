@@ -1,6 +1,7 @@
 #include "search_algos.h"
 /**
  * linear_search - linear search through array
+ * @array: array searching through
  * @size: size of array
  * @value: value searching for
  * Return: index of value on success, -1 on failure
